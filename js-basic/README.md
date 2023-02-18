@@ -1,1 +1,1 @@
-# js basuc
+# js basic
