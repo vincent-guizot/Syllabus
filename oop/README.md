@@ -15,8 +15,5 @@ b. Peserta memahami Teori OOP
     b. Tropical Farm
 
 - Medium
-
-    a. Employee Workload
-    b. Transaction Book 
-
+ 
 - Hard
