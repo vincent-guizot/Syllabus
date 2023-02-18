@@ -31,7 +31,13 @@ Tujuan dari aplikasi ini adalah `Staff` dapat mengerjakan `Ticket` yang diberika
 
 ### Command
 
+A. Skenario: _User belum login_
 
+  ```bash
+  node index.js help
+  node index.js login <username> <pwd>
+  node index.js register <username> <access>
+  ```
 
 ## Format
 
