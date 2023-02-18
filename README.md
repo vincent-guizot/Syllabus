@@ -1,4 +1,1 @@
 # Syllabus
-
-## TASKS
-
