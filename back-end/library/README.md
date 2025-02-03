@@ -92,7 +92,7 @@ Aplikasikan _endpoints_ yang di berikan :
 | POST   | /authors/add                | Menambahkan data                          |
 | POST   | /books/add                  | Menambahkan data                          |
 | POST   | /publishers/add             | Menambahkan data                          |
-| POST   | /gennres/add                | Menambahkan data                          |
+| POST   | /genres/add                 | Menambahkan data                          |
 
 ### Task 3
 
