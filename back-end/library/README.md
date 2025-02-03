@@ -1,6 +1,6 @@
 # Library Application
 
-## LLearnning Competencies 
+## Learnning Competencies
 
 ## Summary
 
@@ -43,18 +43,18 @@ b. `Profile` yang berisi :
 
 c. `Books` yang berisi :
 
-| Field       | Data Type    | Description |
-| ----------- | ------------ | ----------- |
-| id          | integer (PK) | Increment   |
-| name        | string       | NOT NULL    |
-| synopsis    | string       | NOT NULL    |
-| pages       | integer      | NOT NULL    |
-| price       | integer      | NOT NULL    |
-|image | strng | NOT NULL|
+| Field    | Data Type    | Description |
+| -------- | ------------ | ----------- |
+| id       | integer (PK) | Increment   |
+| name     | string       | NOT NULL    |
+| synopsis | string       | NOT NULL    |
+| pages    | integer      | NOT NULL    |
+| price    | integer      | NOT NULL    |
+| image    | strng        | NOT NULL    |
 
-| AuthorId    | integer      | Foreign Key |
-| PublisherId | integer      | Foreign Key |
-| GenreId     | integer      | Foreign Key |
+| AuthorId | integer | Foreign Key |
+| PublisherId | integer | Foreign Key |
+| GenreId | integer | Foreign Key |
 
 d. `Genres` yang berisi:
 
@@ -98,14 +98,14 @@ Aplikasikan _endpoints_ yang di berikan :
 
 Aplikasi kan views dengan menggunakan _EJS_, buatlah pages berikut ini:
 
-1. Home pages 
+1. Home pages
 
-    - Endpoints: `/`
-    - Keterangan :
+   - Endpoints: `/`
+   - Keterangan :
 
-        + Menampilkan list `Books` dan `Authors`.
-        + Terdapat menu navbar : Authors, Publishers, Genres
+     - Menampilkan list `Books` dan `Authors`.
+     - Terdapat menu navbar : Authors, Publishers, Genres
 
-2. Bookks page 
+2. Books page
 
-    - Endpoints : `/books`
+   - Endpoints : `/books`
