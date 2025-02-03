@@ -34,5 +34,11 @@ Mandatory Tasks
 ### Front End
 
 1. React - Web Design
+   - Bootstrap
+   - Tailwind
 2. Public API
 3. Codigram
+4. Redux - React Redux
+5. Firebase
+   - Authentication
+   - Firestore
