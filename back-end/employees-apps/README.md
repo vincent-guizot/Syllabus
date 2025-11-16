@@ -50,7 +50,7 @@ Buatlah 3 class: `Employee`, `Job`, `Employer` dengan ketentuan berikut:
   | name           | string                      |
   | type           | string                      |
   | total_employee | number                      |
-  | city           | stri                        |
+  | city           | string                      |
 
 ### Task 2
 
@@ -67,7 +67,7 @@ Buatlah _endpoints_ dalam folder **Routes** seperti berikut:
 | Method | Endpoints             | Keterangan                                  |
 | ------ | --------------------- | ------------------------------------------- |
 | GET    | /                     | berisi home page                            |
-| GET    | /employees            | berisi data karyawan dari `employeess.json` |
+| GET    | /employees            | berisi data karyawan dari `employees.json`  |
 | GET    | /jobs                 | berisi data pekerjaan dari `jobs.json`      |
 | GET    | /employers            | berisi data pekerjaan dari `employers.json` |
 | POST   | /employees/create     | berfungsi untuk menambahkan data            |
