@@ -40,17 +40,17 @@ Buat 5 tabel berikut:
 
 ## 1. Employees
 
-| key           | type                          | keterangan        |
-| ------------- | ----------------------------- | ----------------- |
-| id            | SERIAL                        | primary key       |
-| name          | VARCHAR(100)                  | NOT NULL          |
-| age           | INTEGER                       | CHECK (age >= 18) |
-| city          | VARCHAR(100)                  | NOT NULL          |
-| email         | VARCHAR(150) UNIQUE           | NOT NULL          |
-| phone         | VARCHAR(20)                   |                   |
-| employer_id   | INTEGER (FK → Employers.id)   | NOT NULL          |
-| job_id        | INTEGER (FK → Jobs.id)        | NOT NULL          |
-| department_id | INTEGER (FK → Departments.id) | NOT NULL          |
+| key          | type                          | keterangan        |
+| ------------ | ----------------------------- | ----------------- |
+| id           | SERIAL                        | primary key       |
+| name         | VARCHAR(100)                  | NOT NULL          |
+| age          | INTEGER                       | CHECK (age >= 18) |
+| city         | VARCHAR(100)                  | NOT NULL          |
+| email        | VARCHAR(150) UNIQUE           | NOT NULL          |
+| phone        | VARCHAR(20)                   |                   |
+| employerId   | INTEGER (FK → Employers.id)   | NOT NULL          |
+| jobId        | INTEGER (FK → Jobs.id)        | NOT NULL          |
+| departmentId | INTEGER (FK → Departments.id) | NOT NULL          |
 
 ---
 
@@ -68,24 +68,24 @@ Buat 5 tabel berikut:
 
 ## 3. Employers
 
-| key            | type         | keterangan  |
-| -------------- | ------------ | ----------- |
-| id             | SERIAL       | primary key |
-| name           | VARCHAR(150) | NOT NULL    |
-| type           | VARCHAR(50)  | NOT NULL    |
-| city           | VARCHAR(100) | NOT NULL    |
-| total_employee | INTEGER      | DEFAULT 0   |
+| key             | type         | keterangan  |
+| --------------- | ------------ | ----------- |
+| id              | SERIAL       | primary key |
+| name            | VARCHAR(150) | NOT NULL    |
+| type            | VARCHAR(50)  | NOT NULL    |
+| city            | VARCHAR(100) | NOT NULL    |
+| total_employees | INTEGER      | DEFAULT 0   |
 
 ---
 
 ## 4. Departments (NEW)
 
-| key         | type                        | keterangan  |
-| ----------- | --------------------------- | ----------- |
-| id          | SERIAL                      | primary key |
-| name        | VARCHAR(100)                | NOT NULL    |
-| floor       | INTEGER                     |             |
-| employer_id | INTEGER (FK → Employers.id) | NOT NULL    |
+| key        | type                        | keterangan  |
+| ---------- | --------------------------- | ----------- |
+| id         | SERIAL                      | primary key |
+| name       | VARCHAR(100)                | NOT NULL    |
+| floor      | INTEGER                     |             |
+| employerId | INTEGER (FK → Employers.id) | NOT NULL    |
 
 ---
 
@@ -99,7 +99,7 @@ Buat 5 tabel berikut:
 
 ---
 
-# TASK 1B — RELATIONSHIPS (HARUS DIBUAT DI DATABASE)
+# TASK 2 — RELATIONSHIPS (HARUS DIBUAT DI DATABASE)
 
 Aplikasikan relasi berikut:
 
@@ -125,16 +125,16 @@ Aplikasikan relasi berikut:
 
 #### Table: EmployeeBenefits
 
-| key         | type         |
-| ----------- | ------------ |
-| employee_id | INTEGER (FK) |
-| benefit_id  | INTEGER (FK) |
+| key        | type         |
+| ---------- | ------------ |
+| employeeId | INTEGER (FK) |
+| benefitId  | INTEGER (FK) |
 
-Primary key kombinasi: _(employee_id, benefit_id)_
+Primary key kombinasi: _(employeeId, benefitId)_
 
 ---
 
-# TASK 2 — ERD
+# TASK 3 — ERD
 
 Buat ERD berdasarkan tabel & relasi di atas:
 
@@ -150,7 +150,7 @@ Silakan buat di **dbdiagram.io**, lalu export PNG / PDF dan masukkan ke folder *
 
 ---
 
-# TASK 3 — ROUTES (ENDPOINTS)
+# TASK 4 — ROUTES (ENDPOINTS)
 
 Buat routes berikut untuk setiap resource:
 
@@ -175,6 +175,10 @@ Buat routes berikut untuk setiap resource:
 | POST   | /employers/update/:id | Update employer               |
 
 ---
+
+# TASK 5 - API DOCUMENTATION
+
+Buat API Documentations menggunakann Swagger
 
 ## NOTE
 
