@@ -1,0 +1,196 @@
+# 📡 API / BACK END — INVENTORY MASTER
+
+## 📘 Summary
+
+Backend aplikasi **Inventory Master** bertugas menyediakan REST API untuk mengelola data Warehouse, Category, Item, Supplier, dan StockIn.  
+API dibangun menggunakan **Express.js**, **Node.js**, dan **PostgreSQL Sequelize**, mengikuti arsitektur **MVC** serta standar **RESTful API**.  
+Semua endpoint harus mendukung **CRUD** lengkap + relasi 1-to-many.
+
+---
+
+## 🧱 Outline
+
+1. Project Setup
+2. Folder Structure (MVC)
+3. Environment Config (.env)
+4. Sequelize Init + Model + Migration
+5. CRUD Controllers
+6. Routes
+7. Error Handling
+8. API Testing (Postman)
+9. Deployment ke Render
+
+---
+
+## 🛠️ Tech Stacks
+
+- **Node.js**
+- **Express.js**
+- **PostgreSQL**
+- **Sequelize ORM**
+- **Sequelize CLI**
+- **Nodemon**
+- **Render Deployment**
+
+---
+
+## 🎯 Objectives
+
+Backend harus mampu:
+
+1. Membuat struktur database dengan **5 tabel** + relasi:
+   - Warehouse (1) → Category (many)
+   - Category (1) → Item (many)
+   - Supplier (1) → Item (many)
+   - Item (1) → StockIn (many)
+2. Menyediakan **CRUD API**:
+   - Warehouse CRUD
+   - Category CRUD
+   - Item CRUD
+   - Supplier CRUD
+   - StockIn CRUD
+3. Menyediakan **filtered endpoints**:
+   - GET items by category
+   - GET categories by warehouse
+   - GET stock-in history by item
+4. Menggunakan **MVC pattern**
+5. Menggunakan **Sequelize Migration + Seeder**
+6. Menghandle error (404, 500, validation)
+7. Dapat diakses dari Front End via Axios
+
+---
+
+## 🧪 TASKS
+
+### **Task 1 — Project Setup**
+
+- Inisialisasi project:
+  ```
+  npm init -y
+  npm install express pg pg-hstore sequelize sequelize-cli cors dotenv
+  npm install --save-dev nodemon
+  ```
+- Setup script nodemon
+- Buat folder:
+  ```
+  /models
+  /migrations
+  /controllers
+  /routes
+  /seeders
+  /config
+  ```
+- Buat app.js dan server.js
+
+---
+
+### **Task 2 — Sequelize Init**
+
+- Jalankan:
+  ```
+  npx sequelize init
+  ```
+- Isi database.js (config) berdasarkan .env
+
+---
+
+### **Task 3 — Create 5 Tables (Models + Migrations)**
+
+1. **Warehouse**
+2. **Category** (FK: warehouse_id)
+3. **Supplier**
+4. **Item** (FK: category_id, supplier_id)
+5. **StockIn** (FK: item_id)
+
+- Buat migration:
+  ```
+  npx sequelize model:generate --name Warehouse --attributes name:string,location:string,capacity:integer
+  ```
+
+(lakukan untuk semua tabel)
+
+- Jalankan migration:
+  ```
+  npx sequelize db:migrate
+  ```
+
+---
+
+### **Task 4 — Create Controllers**
+
+- warehouseController.js
+- categoryController.js
+- itemController.js
+- supplierController.js
+- stockInController.js
+
+Masing-masing implement:
+
+- create
+- getAll
+- getById
+- update
+- delete
+
+---
+
+### **Task 5 — Create Routes**
+
+- `/warehouses`
+- `/categories`
+- `/items`
+- `/suppliers`
+- `/stockin`
+
+* relasi:
+
+- `/warehouses/:id/categories`
+- `/categories/:id/items`
+- `/suppliers/:id/items`
+- `/items/:id/stockin`
+
+---
+
+### **Task 6 — Middleware**
+
+- Error Handler
+- Not Found Handler
+- Logging sederhana
+
+---
+
+### **Task 7 — API Testing (Postman)**
+
+- Test semua CRUD
+- Test relasi
+- Test error handling
+
+---
+
+### **Task 8 — Deployment**
+
+## 🚀 Deployment (Render)
+
+1. Push code ke GitHub
+2. Buat Web Service di Render
+3. Tambahkan ENV:
+   - DATABASE_URL
+   - NODE_ENV=production
+4. Jalankan migration:
+   ```
+   npx sequelize db:migrate
+   ```
+5. Test live API:
+   ```
+   https://your-app.onrender.com/items
+   ```
+
+---
+
+## 📌 Notes
+
+- Pastikan semua endpoint mengembalikan JSON standar:
+  ```
+  { "message": "...", "data": {...} }
+  ```
+- Seluruh API harus siap di-consume dari Front End React.
