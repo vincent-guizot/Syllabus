@@ -1,0 +1,178 @@
+{
+   "users": [
+      {
+         "id": 1,
+         "name": "Admin Quantum",
+         "email": "admin@quantummart.com",
+         "password": "admin123",
+         "role": "admin"
+      },
+      {
+         "id": 2,
+         "name": "Maya Shopper",
+         "email": "maya@quantummart.com",
+         "password": "maya123",
+         "role": "member"
+      },
+      {
+         "id": 3,
+         "name": "Kevin Buyer",
+         "email": "kevin@quantummart.com",
+         "password": "kevin123",
+         "role": "member"
+      }
+   ],
+   "products": [
+      {
+         "id": 1,
+         "name": "Smart LED Lamp",
+         "price": 120000,
+         "category": "Electronics",
+         "stock": 30,
+         "rating": 4.7,
+         "image": "https://via.placeholder.com/300?text=QM+Product+1",
+         "description": "Lampu pintar hemat energi dengan koneksi WiFi."
+      },
+      {
+         "id": 2,
+         "name": "Eco Water Bottle",
+         "price": 45000,
+         "category": "Lifestyle",
+         "stock": 50,
+         "rating": 4.5,
+         "image": "https://via.placeholder.com/300?text=QM+Product+2",
+         "description": "Botol minum ramah lingkungan 700ml."
+      },
+      {
+         "id": 3,
+         "name": "ANC Headphone",
+         "price": 350000,
+         "category": "Electronics",
+         "stock": 12,
+         "rating": 4.9,
+         "image": "https://via.placeholder.com/300?text=QM+Product+3",
+         "description": "Headphone premium dengan Active Noise Cancellation."
+      },
+      {
+         "id": 4,
+         "name": "Yoga Mat Pro",
+         "price": 150000,
+         "category": "Sports",
+         "stock": 25,
+         "rating": 4.6,
+         "image": "https://via.placeholder.com/300?text=QM+Product+4",
+         "description": "Mat yoga anti-slip bahan premium."
+      },
+      {
+         "id": 5,
+         "name": "Gaming Mouse X",
+         "price": 180000,
+         "category": "Electronics",
+         "stock": 15,
+         "rating": 4.8,
+         "image": "https://via.placeholder.com/300?text=QM+Product+5",
+         "description": "Mouse gaming 7200 DPI RGB."
+      },
+      {
+         "id": 6,
+         "name": "Minimalist Mug",
+         "price": 30000,
+         "category": "Home",
+         "stock": 40,
+         "rating": 4.4,
+         "image": "https://via.placeholder.com/300?text=QM+Product+6",
+         "description": "Mug keramik gaya minimalis."
+      },
+      {
+         "id": 7,
+         "name": "Desk Organizer Set",
+         "price": 70000,
+         "category": "Home",
+         "stock": 28,
+         "rating": 4.5,
+         "image": "https://via.placeholder.com/300?text=QM+Product+7",
+         "description": "Organizer meja 3-in-1."
+      },
+      {
+         "id": 8,
+         "name": "Bluetooth Speaker Mini",
+         "price": 90000,
+         "category": "Electronics",
+         "stock": 22,
+         "rating": 4.3,
+         "image": "https://via.placeholder.com/300?text=QM+Product+8",
+         "description": "Speaker portable dengan bass kuat."
+      },
+      {
+         "id": 9,
+         "name": "Premium Notebook",
+         "price": 28000,
+         "category": "Stationery",
+         "stock": 60,
+         "rating": 4.6,
+         "image": "https://via.placeholder.com/300?text=QM+Product+9",
+         "description": "Notebook hardcover 120 halaman."
+      },
+      {
+         "id": 10,
+         "name": "Aroma Therapy Candle",
+         "price": 50000,
+         "category": "Lifestyle",
+         "stock": 35,
+         "rating": 4.7,
+         "image": "https://via.placeholder.com/300?text=QM+Product+10",
+         "description": "Lilin aromaterapi lavender premium."
+      },
+      {
+         "id": 11,
+         "name": "Stainless Lunch Box",
+         "price": 65000,
+         "category": "Home",
+         "stock": 18,
+         "rating": 4.5,
+         "image": "https://via.placeholder.com/300?text=QM+Product+11",
+         "description": "Kotak makan stainless bebas BPA."
+      },
+      {
+         "id": 12,
+         "name": "USB-C Fast Charger",
+         "price": 85000,
+         "category": "Electronics",
+         "stock": 20,
+         "rating": 4.8,
+         "image": "https://via.placeholder.com/300?text=QM+Product+12",
+         "description": "Charger cepat 25W USB-C."
+      }
+   ],
+   "cart": [
+      {
+         "id": 1,
+         "userId": 2,
+         "productId": 3,
+         "qty": 1
+      }
+   ],
+   "orders": [
+      {
+         "id": 1,
+         "userId": 2,
+         "items": [
+            {
+               "productId": 3,
+               "name": "ANC Headphone",
+               "qty": 1,
+               "price": 350000
+            },
+            {
+               "productId": 2,
+               "name": "Eco Water Bottle",
+               "qty": 1,
+               "price": 45000
+            }
+         ],
+         "total": 395000,
+         "status": "completed",
+         "createdAt": "2025-11-17T10:00:00+07:00"
+      }
+   ]
+}
