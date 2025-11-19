@@ -2,7 +2,7 @@
 
 _A Full Stack Discussion Platform (React + Express + PostgreSQL)_
 
-<img src="https://img.freepik.com/free-vector/flat-design-shopping-center-facebook-cover_23-2149337410.jpg?semt=ais_hybrid&w=740&q=80" width="100%" />
+<img src="./images/banner.png" width="100%" />
 
 ---
 
