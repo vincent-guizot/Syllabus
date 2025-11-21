@@ -2,6 +2,8 @@
 
 **Hard Level — Full Stack (React, Express, PostgreSQL, Firebase)**
 
+<img src="./MA banner.png" width="50%"/>
+
 ## 📖 Story
 
 Di era abad pertengahan, para **Lords** menyewakan kastil megah, pondok kayu, menara penyihir, hingga arena jousting.  
