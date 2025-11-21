@@ -1,0 +1,202 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin Bookverse",
+      "email": "admin@bookverse.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Reader",
+      "email": "sarah@bookverse.com",
+      "password": "sarah123",
+      "role": "member"
+    },
+    {
+      "id": 3,
+      "name": "Ali Student",
+      "email": "ali@student.com",
+      "password": "ali123",
+      "role": "member"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "React Fundamentals",
+      "author": "Dan Abramov",
+      "price": 120000,
+      "category": "Programming",
+      "stock": 10,
+      "rating": 4.9,
+      "image": "https://via.placeholder.com/300?text=Book+1",
+      "description": "Panduan lengkap React dari dasar hingga lanjutan.",
+      "publishedDate": "2021-06-15"
+    },
+    {
+      "id": 2,
+      "title": "JavaScript: The Good Parts",
+      "author": "Douglas Crockford",
+      "price": 85000,
+      "category": "Programming",
+      "stock": 8,
+      "rating": 4.7,
+      "image": "https://via.placeholder.com/300?text=Book+2",
+      "description": "Klasik tentang bagian-bagian JavaScript yang penting.",
+      "publishedDate": "2008-05-01"
+    },
+    {
+      "id": 3,
+      "title": "Eloquent JavaScript",
+      "author": "Marijn Haverbeke",
+      "price": 95000,
+      "category": "Programming",
+      "stock": 12,
+      "rating": 4.8,
+      "image": "https://via.placeholder.com/300?text=Book+3",
+      "description": "Belajar JavaScript modern dengan contoh nyata.",
+      "publishedDate": "2018-12-04"
+    },
+    {
+      "id": 4,
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "price": 140000,
+      "category": "Software Engineering",
+      "stock": 6,
+      "rating": 4.9,
+      "image": "https://via.placeholder.com/300?text=Book+4",
+      "description": "Prinsip-prinsip menulis kode yang mudah dipelihara.",
+      "publishedDate": "2008-08-11"
+    },
+    {
+      "id": 5,
+      "title": "Designing Data-Intensive Applications",
+      "author": "Martin Kleppmann",
+      "price": 180000,
+      "category": "Architecture",
+      "stock": 5,
+      "rating": 4.8,
+      "image": "https://via.placeholder.com/300?text=Book+5",
+      "description": "Konsep arsitektur sistem skala besar dan tahan gangguan.",
+      "publishedDate": "2017-03-20"
+    },
+    {
+      "id": 6,
+      "title": "The Pragmatic Programmer",
+      "author": "Andrew Hunt & David Thomas",
+      "price": 130000,
+      "category": "Software Engineering",
+      "stock": 9,
+      "rating": 4.7,
+      "image": "https://via.placeholder.com/300?text=Book+6",
+      "description": "Panduan praktik baik untuk pengembang perangkat lunak.",
+      "publishedDate": "1999-10-20"
+    },
+    {
+      "id": 7,
+      "title": "You Don't Know JS (Book Series)",
+      "author": "Kyle Simpson",
+      "price": 110000,
+      "category": "Programming",
+      "stock": 14,
+      "rating": 4.6,
+      "image": "https://via.placeholder.com/300?text=Book+7",
+      "description": "Seri buku mendalam tentang aspek-aspek JavaScript.",
+      "publishedDate": "2015-07-10"
+    },
+    {
+      "id": 8,
+      "title": "Refactoring",
+      "author": "Martin Fowler",
+      "price": 160000,
+      "category": "Software Engineering",
+      "stock": 7,
+      "rating": 4.8,
+      "image": "https://via.placeholder.com/300?text=Book+8",
+      "description": "Teknik refactoring untuk meningkatkan kualitas kode.",
+      "publishedDate": "2018-11-19"
+    },
+    {
+      "id": 9,
+      "title": "Don't Make Me Think",
+      "author": "Steve Krug",
+      "price": 80000,
+      "category": "Design",
+      "stock": 20,
+      "rating": 4.5,
+      "image": "https://via.placeholder.com/300?text=Book+9",
+      "description": "Dasar-dasar usability dan desain web yang intuitif.",
+      "publishedDate": "2014-11-05"
+    },
+    {
+      "id": 10,
+      "title": "Hooked: How to Build Habit-Forming Products",
+      "author": "Nir Eyal",
+      "price": 90000,
+      "category": "Product",
+      "stock": 11,
+      "rating": 4.4,
+      "image": "https://via.placeholder.com/300?text=Book+10",
+      "description": "Metode merancang produk yang membuat pengguna kembali lagi.",
+      "publishedDate": "2014-01-15"
+    },
+    {
+      "id": 11,
+      "title": "Sprint",
+      "author": "Jake Knapp",
+      "price": 85000,
+      "category": "Product",
+      "stock": 13,
+      "rating": 4.6,
+      "image": "https://via.placeholder.com/300?text=Book+11",
+      "description": "Metode 5 hari untuk memecahkan masalah desain dan produk.",
+      "publishedDate": "2016-10-04"
+    },
+    {
+      "id": 12,
+      "title": "The Design of Everyday Things",
+      "author": "Don Norman",
+      "price": 100000,
+      "category": "Design",
+      "stock": 16,
+      "rating": 4.7,
+      "image": "https://via.placeholder.com/300?text=Book+12",
+      "description": "Prinsip desain yang memengaruhi interaksi manusia sehari-hari.",
+      "publishedDate": "2013-09-25"
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "userId": 2,
+      "bookId": 1,
+      "qty": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 2,
+      "items": [
+        {
+          "bookId": 1,
+          "title": "React Fundamentals",
+          "qty": 1,
+          "price": 120000
+        },
+        {
+          "bookId": 9,
+          "title": "Don't Make Me Think",
+          "qty": 1,
+          "price": 80000
+        }
+      ],
+      "total": 200000,
+      "status": "completed",
+      "createdAt": "2025-11-17T10:00:00+07:00"
+    }
+  ]
+}
