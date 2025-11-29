@@ -1,125 +1,144 @@
-# Tropical Farm
+# Tropical Farm — OOP Exercises
 
-## SUMMARY
+## Summary
 
-Seorang pengusaha bernama Vincent mempunyai beberapa perkebunan buah dan sayuran. Tibalah hari di mana akan panen buah dan sayuran, buah yang dimiliki memiliki 3 jenis dan sayuran yang dimiliki juga 3 jenis. Masing-masing jenis memliki harga jual yang berbeda dan akan di pannen dalam keranjang dan akan di jual.
+Latihan OOP bertema **Tropical Farm** yang berfokus pada inheritance, polymorphism, abstract class, interface, dan factory pattern. Kamu akan membuat 2 parent class dengan total 10 turunan tanaman, lalu membuat factory dan simulasi farm sederhana tanpa loop.
+
+---
 
 ## Outline
 
-1. Peserta dapat paham tentang OOP
-2. Peserta dapat mengaplikasikan teori OOP
+1. Dua parent class:
 
-## Task 1
+   - `FruitPlant`
+   - `HerbPlant`
 
-Peserta ditugas untuk membuat `class` utama :
+2. Masing-masing punya 5 inheritance:
 
-a. `Fruit`
+   - **FruitPlant:** Banana, Mango, Papaya, Pineapple, Coconut
+   - **HerbPlant:** Lemongrass, Ginger, Turmeric, Basil, Mint
 
-Memiliki attributes berikut ini:
+3. Semua class punya:
 
-| Key         | Description                       |
-| ----------- | --------------------------------- |
-| id          | Nomor khusus tiap buah, increment |
-| name        | Nama dari buah                    |
-| type        | Jenis buah                        |
-| price       | Harga buah                        |
-| amount      | total buah yang di petik          |
-| harvestedAt | waktu ketika di panen             |
+   - property: `id`,`name`,`type`,`category`, `growthRate`, `waterNeeds`
+   - method: `grow()`, `harvest()`
+   - method polymorphic: `specialAbility()` hanya console.log saja
 
-b. `Vegetable`
+4. Buat **TropicalPlantFactory** dengan banyak method utilitas (5–10 method total).
 
-Memiliki attributes berikut ini:
+5. Buat simulasi farm sederhana tanpa loop.
 
-| Key         | Description                        |
-| ----------- | ---------------------------------- |
-| id          | Nomor khusus tiap sayur, increment |
-| name        | Nama dari sayur                    |
-| type        | Jenis sayur                        |
-| price       | Harga sayur                        |
-| amount      | total sayur yang di petik          |
-| harvestedAt | waktu ketika di panen              |
+---
 
-## Task 2
+## Tasks
 
-Peserta membuat `inheritance class`::
+### Task 1 — Parent Class
 
-a. `Apple`, `Orange`, dan `Other` dari class utama `Fruit`
+Buat dua parent class: `FruitPlant` dan `HerbPlant` dengan:
 
-b. `Potato`, `Carrot`, dan `Other` dari class utama `Vegetable`
+- constructor
+- method umum: `grow()`, `harvest()`
+- method polymorphic: `specialAbility()` (kosong/abstract)
 
-## Task 3
+---
 
-Peserta membuat kelas factory `Warehouse` dengan attribute dan mmethod berikut:
+### Task 2 — 10 Class Turunan
 
-- attributes
+Buat 10 turunan dari kedua parent class.  
+Override `specialAbility()` dengan kemampuan unik (misal: Banana cepat tumbuh, Mint cepat regenerasi).
 
-  - carts : berisi buah dan sayuran hasil panen
-  - totalPrice : berisi total dari seluruh harga buah dan sayuran yang di jual
-    panen.
+---
 
-  Contoh isi dari _carts_:
+### Task 3 — Polymorphism Test (Tanpa Loop)
 
-  ```js
-  /*
-  [
-      {
-          id: 1,
-          name: 'NZ Apple Sweet',
-          type: 'Apple',
-          price: 150000,
-          amount: 10,
-          harvestedAT: new Date()
-      },
-      {
-          id: 2,
-          name: 'Ponkan Mandarin',
-          type: 'Orange',
-          price: 100000,
-          amount: 5,
-          harvestedAt: new Date()
-      }
-  ]
-  */
-  ```
+Buat beberapa instance:
 
-- methoods:
+```js
+new Banana();
+new Ginger();
+new Mint();
+new Mango();
+```
 
-  - harvest : memetik buah dan sayuran dan memasukan ke dalam cart.
+Panggil:
 
-    - amount : random antara 1 - 100
-    - harvestedAt : menggunakan new Date()
+- `grow()`
+- `specialAbility()`
+- `harvest()`
 
-    ```js
-    harvest(name,type,price){
-        // code here
-    }
-    ```
+---
 
-  - ship : mengeluarkan buah dan sayuran dari cart dan mengirim ke penjualan
+### Task 4 — TropicalPlantFactory (Wajib 5–10 Method)
 
-    ```js
-    ship(id){
-        // code here
-    }
+Buat **factory class** dengan **minimal 5 dan maksimal 10 method**, misalnya:
 
-    // Feedback
-    // "NZ Apple Sweet" has been shipped.
+**Wajib ada:**
 
-    // Feedback jika tidak ada
-    // Id 1 is not in the cart.
+1. `createPlant(name)` → return instance berdasarkan nama.
+2. `getAllPlantNames()` → return daftar semua tanaman yang tersedia.
+3. `isFruit(name)` → cek apakah nama termasuk fruit.
+4. `isHerb(name)` → cek apakah nama termasuk herb.
+5. `generateRandomPlant()` → return 1 tanaman random.
 
-    // Ketika sudah di jual harga buah atau sayur akan di total kan ke dalam key `totalPrice`
-    ```
+**Tambahan opsional (pilih 0–5 untuk total 5–10 method):**
 
-  - showCarts: menampilkan seluruh buah dan sayuran yang ada dalam carts
+6. `generateMultipleRandomPlants(count)` → return array tanaman random.
+7. `createFruit(name)` → khusus buat fruit saja.
+8. `createHerb(name)` → khusus buat herb saja.
+9. `getPlantCategory(name)` → return `"fruit"` atau `"herb"`.
+10. `exists(name)` → return true/false jika plant tersedia.
 
-  ```js
-  /*
-  There are 5 carts, which are:
-  1. NZ Apple Sweet - Rp. 150000
-  2. Ponkan Mandarin - Rp. 100000
-  
-  // Jika tidak ada carts
-  There isn't any cart.
-  */
-  ```
+**Contoh:**
+
+```js
+const p = TropicalPlantFactory.createPlant("pineapple");
+const random = TropicalPlantFactory.generateRandomPlant();
+```
+
+---
+
+### Task 5 — Simulasi Farm (Tanpa Loop)
+
+- buat 3–5 tanaman dari factory
+- panggil `grow()` pada tiap tanaman
+- panggil `specialAbility()`
+- panggil `harvest()`
+- tampilkan output console
+
+---
+
+## Extra Challenge
+
+### Challenge 1 — Abstract / Interface
+
+Buat interface `IPlant`:
+
+- `grow()`
+- `harvest()`
+- `specialAbility()`
+
+Parent class harus implement interface tersebut.
+
+---
+
+### Challenge 2 — Water System
+
+Buat `WaterManager`:
+
+- jika tanaman tidak disiram → `growthRate` turun
+- `Mint` dan `Basil` lebih tahan kering
+
+---
+
+## Tips and Trick
+
+- Parent berisi method umum agar turunan tidak duplikasi.
+- Polymorphism sangat terlihat pada override `specialAbility()`.
+- Factory mempermudah pembuatan banyak object.
+- Tambah fitur sedikit demi sedikit.
+
+---
+
+```
+
+```
