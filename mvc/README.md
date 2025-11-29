@@ -12,12 +12,14 @@ b. Peserta memahami Teori MVC
 
 - Easy
 
-  a. [Todo Apps]()
+  a. [Todo Apps](./todo-apps%20copy/)
 
 - Medium
 
   a. [Harvest Time](harvest%20time%20-%20mvc%20medium.pdf)
 
-  b. [Snappy Shop](./snappy-tur-shop/README.md)
+  b. [Snappy Shop](./snappy-turtle-shop/README.md)
 
 - Hard
+
+  a. [Employee Workload](./employee-workload/)
