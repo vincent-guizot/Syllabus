@@ -1,0 +1,53 @@
+# 🧩 Async JavaScript Theory — Topics & Questions
+
+Berikut 5 topik utama Asynchronous JavaScript beserta 5 soal teori pada setiap topik.
+
+---
+
+## 1️⃣ Callback
+
+1. Jelaskan apa yang dimaksud dengan callback function dan mengapa digunakan dalam proses asynchronous.
+2. Apa penyebab munculnya callback hell dalam JavaScript?
+3. Bandingkan synchronous callback dan asynchronous callback dari sisi eksekusi.
+4. Mengapa error handling pada callback dianggap kurang efisien?
+5. Berikan contoh kasus nyata (tanpa code) yang biasanya menggunakan callback.
+
+---
+
+## 2️⃣ Promise
+
+1. Apa tiga state utama dalam Promise dan jelaskan fungsi masing-masing state.
+2. Jelaskan peran resolve dan reject dalam proses Promise.
+3. Mengapa Promise dianggap solusi terhadap masalah callback hell?
+4. Apa tujuan dari Promise chaining dan bagaimana cara kerjanya secara konsep?
+5. Jelaskan bagaimana error ditangani dalam Promise menggunakan `.catch()`.
+
+---
+
+## 3️⃣ Async / Await
+
+1. Jelaskan konsep dasar async/await dan bagaimana cara kerja await terhadap Promise.
+2. Mengapa async/await dianggap membuat kode lebih mudah dibaca dibanding .then()?
+3. Jelaskan bagaimana error handling dilakukan pada async/await menggunakan try/catch.
+4. Apa perbedaan konsep antara menjalankan dua proses async secara sequential vs parallel?
+5. Sebutkan keterbatasan async/await dibandingkan fitur Promise seperti Promise.all.
+
+---
+
+## 4️⃣ Event Loop
+
+1. Apa itu Event Loop dan mengapa ia penting dalam JavaScript yang single-threaded?
+2. Jelaskan perbedaan call stack dan callback queue.
+3. Apa itu microtask queue dan bagaimana perbedaannya dengan macrotask queue?
+4. Mengapa operasi asynchronous seperti I/O tidak memblokir eksekusi utama?
+5. Bagaimana Event Loop menentukan kapan sebuah callback boleh dieksekusi?
+
+---
+
+## 5️⃣ Asynchronous Web & Node.js APIs
+
+1. Jelaskan bagaimana setTimeout bekerja secara asynchronous.
+2. Apa perbedaan asynchronous API di browser (Web API) dan Node.js (libuv)?
+3. Mengapa operasi jaringan seperti fetch() selalu berjalan asynchronous?
+4. Jelaskan bagaimana non-blocking I/O membuat aplikasi tetap responsif.
+5. Apa perbedaan konsep antara callback-based API, promise-based API, dan async/await-based API?
